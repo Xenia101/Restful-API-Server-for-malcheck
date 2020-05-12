@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request, redirect, url_for, flash
-from flask_jwt_extended import JWTManager, jwt_required, create_access_token, get_jwt_identity
+from flask_jwt_extended import JWTManager, jwt_required, create_access_token, get_jwt_identity, jwt_refresh_token_required, create_refresh_token
 from werkzeug.utils import secure_filename
+import datetime
 import os
 
 UPLOAD_FOLDER = 'files'
@@ -28,8 +29,12 @@ def login():
 
     if username != 'test' or password != 'test':
         return jsonify({"msg": "Bad username or password"}), 401
-    access_token = create_access_token(identity=username , expires_delta=False)
-    return jsonify(access_token=access_token), 200
+
+    expires = datetime.timedelta(days=365)
+    ret = {
+        'access_token': create_access_token(identity=username, expires_delta=expires)
+    }
+    return jsonify(ret), 200
 
 @app.route('/api/auth_test', methods=['GET'])
 @jwt_required
@@ -44,8 +49,10 @@ def upload_file():
         file_upload = request.files['file']
         if file_upload:
             filename = secure_filename(file_upload.filename)
-            file_upload.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return {'up':'good'}
+            if allowed_file(filename):
+                file_upload.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                return {'status':'good'}
+            else: return jsonify({"msg": "not allowed file type"}), 402
 
 if __name__ == '__main__':
     app.run(debug=True)
