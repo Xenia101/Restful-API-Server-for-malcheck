@@ -8,8 +8,10 @@ Restful API & JWT Authentication for malcheck
 </p>
 
 > JSON 형태로 인증토큰을 만들어 통신할때 쓰는 인증방식
+>
 > Header에 Authorization 값을 넣어서 Authorization Server로 보내서 인증
-> 참고 : [jwt.io](https://jwt.io/introduction/)
+>
+> References : [jwt.io](https://jwt.io/introduction/)
 
 **header** : 토큰의 타입과 해시 암호화 알고리즘으로 구성
 - 첫 번째는 토큰의 유형 (JWT)
