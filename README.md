@@ -3,7 +3,9 @@
 Restful API & JWT Authentication for malcheck
 
 ## JWT 란?
-~
+<p>
+  <img src="https://github.com/Xenia101/Restful-API-Server-for-malcheck/blob/master/img/jwt.png?raw=true">
+</p>
 
 ## API List
 - File Upload (**POST**)
