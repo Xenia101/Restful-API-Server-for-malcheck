@@ -41,7 +41,7 @@ print(json_response)
 ```python
 import requests
 
-API = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODkzMDgxOTEsIm5iZiI6MTU4OTMwODE5MSwianRpIjoiOWMzNmU2NzYtMmM1YS00ZTI4LTkzN2QtOWFkNmRiZDQyZjI4IiwiZXhwIjoxNjIwODQ0MTkxLCJpZGVudGl0eSI6IjEyM0BuYXZlci5jb20iLCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MifQ.8EkDH6ZXK8TIFsvyvHYhiGeSEor13wrgW2yEdmA4tho"
+API = PrivateKey
 
 files = {
     "file": open("test.txt", "rb"),
@@ -54,4 +54,19 @@ headers = {
 response = requests.post("http://malcheck.kr/api/upload", files=files, headers=headers)
 
 print(response.json())
+```
+
+## Response Example
+- **Get API Key** `getkey.py`
+```javascript
+{
+  'access_token' : PRIVATE_API_KEY
+}
+```
+
+- **Request File Upload** `upload.py`
+```javascript
+{
+  'status' : STATUS
+}
 ```
