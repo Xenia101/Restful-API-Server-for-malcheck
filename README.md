@@ -7,12 +7,16 @@ Restful API & JWT Authentication for malcheck
   <img src="https://github.com/Xenia101/Restful-API-Server-for-malcheck/blob/master/img/jwt.png?raw=true">
 </p>
 
+> JSON 형태로 인증토큰을 만들어 통신할때 쓰는 인증방식
+> Header에 Authorization 값을 넣어서 Authorization Server로 보내서 인증
+> 참고 : [jwt.io](https://jwt.io/introduction/)
+
 **header** : 토큰의 타입과 해시 암호화 알고리즘으로 구성
 - 첫 번째는 토큰의 유형 (JWT)
 - 두 번째는 HMAC, SHA256 또는 RSA 등 해시 알고리즘 
 
 **payload** : 토큰에 담을 클레임(claim) 정보 → `name : value`의 한 쌍
-> claim : payload에 담는 정보의 한'조각' 
+> 클레임 : payload에 담는 정보의 한'조각' 
 - 클레임의 정보는 등록된(registered) 클레임, 공개(public) 클레임, 비공개(private) 클레임으로 총 세 종류
 
 **signature** : Secret key를 포함하여 암호화되어 
