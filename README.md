@@ -56,7 +56,7 @@ response = requests.post("http://malcheck.kr/api/upload", files=files, headers=h
 print(response.json())
 ```
 
-## Response Example
+## [Python] Response Example
 - **Get API Key** `getkey.py`
 ```javascript
 {
