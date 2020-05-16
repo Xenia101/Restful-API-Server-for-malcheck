@@ -50,9 +50,8 @@ import requests
 
 params = {"username":ID, "password":Password}
 response = requests.post("http://malcheck.kr/login", json=params)
-json_response = response.json()
 
-print(json_response)
+print(response.json())
 ```
 
 - **Request File Upload** `upload.py`
