@@ -34,8 +34,8 @@ Restful API & JWT Authentication for malcheck
   <strong>URL</strong> : http://malcheck.kr/login
   <strong>METHOD</strong> : POST
   <strong>Parameter</strong>
-  <strong> username (필수)</strong> : User ID
-  <strong> password (필수)</strong> : User Password
+  <strong>username (필수)</strong> : User ID
+  <strong>password (필수)</strong> : User Password
   </pre>
 
 - **Request File Upload**
@@ -47,7 +47,7 @@ Restful API & JWT Authentication for malcheck
   <strong>METHOD</strong> : POST
   <strong>Headers</strong> : Authorization API Key
   <strong>Parameter</strong>
-  <strong> file (필수)</strong> : 분석 대상 파일
+  <strong>file (필수)</strong> : 분석 대상 파일
   </pre>
   
   - 업로드한 파일은 요청 순서대로 분석을 합니다. 서버 상황 및 분석 대기 상황에 따라 분석이 지연될 수 있습니다.
