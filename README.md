@@ -28,6 +28,16 @@ Restful API & JWT Authentication for malcheck
   - 검사할 파일을 서버로 업로드 할 수 있습니다.
   
 ## Usage
+- **Get API Key**
+  - 사용자의 아이디 및 패스워드를 이용하여 API 키를 발급받을 수 있습니다.
+  <pre>
+  <strong>URL</strong> : http://malcheck.kr/login
+  <strong>METHOD</strong> : POST
+  <strong>Parameter</strong>
+  <strong> username (필수)</strong> : User ID
+  <strong> password (필수)</strong> : User Password
+  </pre>
+
 - **Request File Upload**
   - 사용자가 보유한 파일을 분석 요청할 때 사용하는 API로 HTTP POST 방식을 이용합니다.
   - API 요청은 아래와 같은 방식을 통해 이루어집니다.
