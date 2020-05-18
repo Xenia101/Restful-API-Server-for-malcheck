@@ -33,7 +33,7 @@ Restful API & JWT Authentication for malcheck
   <pre>
   <strong>URL</strong> : http://malcheck.kr/login
   <strong>METHOD</strong> : POST
-  <strong>Parameter</strong>
+  <strong>[Parameter]</strong>
   <strong>username (필수)</strong> : User ID
   <strong>password (필수)</strong> : User Password
   </pre>
@@ -46,7 +46,7 @@ Restful API & JWT Authentication for malcheck
   <strong>URL</strong> : http://malcheck.kr/api/upload
   <strong>METHOD</strong> : POST
   <strong>Headers</strong> : Authorization API Key
-  <strong>Parameter</strong>
+  <strong>[Parameter]</strong>
   <strong>file (필수)</strong> : 분석 대상 파일
   </pre>
   
